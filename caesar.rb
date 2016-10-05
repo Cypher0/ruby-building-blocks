@@ -1,22 +1,22 @@
 
-def caesar_cipher(input, num)
+def caesar_cipher(input, shift)
 	alphabet = ('a'..'z').to_a
 	cap_alphabet = ('A'..'Z').to_a
 	letters = input.split("")
 	result = []
 	letters.each do |letter|
 		if alphabet.include?(letter)
-			ind = alphabet.index(letter)
-			if ind + num > alphabet.length
-				ind = ind - alphabet.length
+			i = alphabet.index(letter)
+			if i + shift > alphabet.length
+				i -= alphabet.length
 			end
-				letter = alphabet[ind + num]
+				letter = alphabet[i + shift]
 		elsif cap_alphabet.include?(letter)
-			ind = cap_alphabet.index(letter)
-			if ind + num > cap_alphabet.length
-				ind = ind - cap_alphabet.length
+			i = cap_alphabet.index(letter)
+			if i + shift > cap_alphabet.length
+				i -= cap_alphabet.length
 			end
-				letter = cap_alphabet[ind + num]
+				letter = cap_alphabet[i + shift]
 		end
 		result.push(letter)
 	end
