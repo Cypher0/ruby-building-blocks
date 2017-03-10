@@ -22,7 +22,3 @@ def caesar_cipher(input, shift)
 	end
 	result.join
 end
-
-
-
-puts caesar_cipher("word", 1)
