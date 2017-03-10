@@ -20,9 +20,9 @@ def caesar_cipher(input, shift)
 		end
 		result.push(letter)
 	end
-	puts result.join
+	result.join
 end
 
 
 
-caesar_cipher("What a string!", 5)
+puts caesar_cipher("word", 1)
